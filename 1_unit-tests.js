@@ -40,7 +40,7 @@ suite('Unit Tests', function() {
 
     test('Invalid input (double fraction) should throw an error', function(done) {
         let input = '3/7/2kg';
-        assert.throws(() => convertHandler.getNum(input), Error, 'Invalid input: double fraction');
+        assert.strictEqual(convertHandler.getNum(input), 'invalid number');
         done();
     });
 
